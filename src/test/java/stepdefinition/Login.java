@@ -42,6 +42,15 @@ public class Login {
 
 	@Then("check i am dashbord page")
 	public void check_i_am_dashbord_page() {
+		String productURL =driver.getCurrentUrl();
+		
+		if(productURL.endsWith(prop.getProperty("url"))) {
+			System.out.println("Not login");
+		}
+		else {
+			System.out.println("Login Successfully & test");
+		}
+	
 		 
 	}
 
